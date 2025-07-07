@@ -1,4 +1,4 @@
-/* $Id: VSCSIVpdPagePool.cpp 106320 2024-10-15 12:08:41Z klaus.espenlaub@oracle.com $ */
+/* $Id: VSCSIVpdPagePool.cpp 110138 2025-07-07 17:51:52Z michal.necasek@oracle.com $ */
 /** @file
  * Virtual SCSI driver: VPD page pool
  */
@@ -117,6 +117,7 @@ int vscsiVpdPagePoolQueryPage(PVSCSIVPDPOOL pVScsiVpdPool, PVSCSIREQINT pVScsiRe
     {
         if (pPage->abPage[1] == uPage)
         {
+            vscsiReqSetXferDir(pVScsiReq, VSCSIXFERDIR_T2I);
             vscsiReqSetXferSize(pVScsiReq, pPage->cbPage);
             RTSgBufCopyFromBuf(&pVScsiReq->SgBuf, &pPage->abPage[0], pPage->cbPage);
             return VINF_SUCCESS;
