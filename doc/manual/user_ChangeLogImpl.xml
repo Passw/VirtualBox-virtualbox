@@ -100,6 +100,11 @@ Rules for adding a changelog entry to make them look more uniform:
       </listitem>
 
       <listitem>
+        <para>Windows Host: Implement support for exposing AVX/AVX2 to the guest
+          when Hyper-V is used (github:GH-36)</para>
+      </listitem>
+
+      <listitem>
         <para>Recording: Fixed issue when Windows Guest Machine was
           unable to start when recording was enabled in Display Settings (bug #22363)</para>
       </listitem>
