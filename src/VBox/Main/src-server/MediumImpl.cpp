@@ -1,4 +1,4 @@
-/* $Id: MediumImpl.cpp 106320 2024-10-15 12:08:41Z klaus.espenlaub@oracle.com $ */
+/* $Id: MediumImpl.cpp 110136 2025-07-07 14:37:45Z brent.paulson@oracle.com $ */
 /** @file
  * VirtualBox COM class implementation
  */
@@ -6939,8 +6939,8 @@ HRESULT Medium::i_exportFile(const char *aFilename,
                         else
                             hrc = setErrorVrc(vrc);
                     }
+                    VDDestroy(pSrcHdd);
                 }
-                VDDestroy(pSrcHdd);
             }
             else
                 hrc = setErrorVrc(vrc, "VDInterfaceAdd -> %Rrc", vrc);
