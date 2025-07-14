@@ -91,6 +91,11 @@ Rules for adding a changelog entry to make them look more uniform:
       </listitem>
 
       <listitem>
+        <para>Linux host: fixed possible kernel panic when using bridged networking
+          with a network interface handled by the ixgbe driver on newer kernels</para>
+      </listitem>
+
+      <listitem>
         <para>Windows Host: Fixed issue resulting in BSOD upon closing
           VirtualBox GUI after host package uninstall (github:GH-38)</para>
       </listitem>
