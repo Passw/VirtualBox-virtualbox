@@ -73,6 +73,22 @@ Rules for adding a changelog entry to make them look more uniform:
                            So, we use chapter and xpointer="xpointer(/chapter/)" with xi:include. -->
   <sect1>
 
+    <title>Version X.Y.Z (date tbd)</title>
+
+    <para>This is a maintenance release. The following items were fixed or
+      added:</para>
+
+    <itemizedlist>
+
+      <listitem>
+        <para></para>
+      </listitem>
+
+    </itemizedlist>
+  </sect1>
+
+  <sect1>
+
     <title>Version 7.1.12 (2025-07-15)</title>
 
     <para>This is a maintenance release. The following items were fixed or
@@ -140,7 +156,7 @@ Rules for adding a changelog entry to make them look more uniform:
 
     <title>Version 7.1.10 (2025-06-03)</title>
 
-    <para>This is a maintenance release. The following items were fixed and/or
+    <para>This is a maintenance release. The following items were fixed or
       added:</para>
 
     <itemizedlist>
@@ -194,7 +210,7 @@ Rules for adding a changelog entry to make them look more uniform:
 
     <title>Version 7.1.8 (2025-04-15)</title>
 
-    <para>This is a maintenance release. The following items were fixed and/or
+    <para>This is a maintenance release. The following items were fixed or
       added:</para>
 
     <itemizedlist>
@@ -339,7 +355,7 @@ Rules for adding a changelog entry to make them look more uniform:
 
     <title>Version 7.1.6 (2025-01-21)</title>
 
-    <para>This is a maintenance release. The following items were fixed and/or
+    <para>This is a maintenance release. The following items were fixed or
       added:</para>
 
     <itemizedlist>
@@ -474,7 +490,7 @@ Rules for adding a changelog entry to make them look more uniform:
 
     <title>Version 7.1.4 (2024-10-15)</title>
 
-    <para>This is a maintenance release. The following items were fixed and/or
+    <para>This is a maintenance release. The following items were fixed or
       added:</para>
 
     <itemizedlist>
@@ -533,7 +549,7 @@ Rules for adding a changelog entry to make them look more uniform:
 
     <title>Version 7.1.2 (2024-09-26)</title>
 
-    <para>This is a maintenance release. The following items were fixed and/or
+    <para>This is a maintenance release. The following items were fixed or
       added:</para>
 
     <itemizedlist>
@@ -666,7 +682,7 @@ Rules for adding a changelog entry to make them look more uniform:
 
     </itemizedlist>
 
-    <para>In addition, the following items were fixed and/or added:</para>
+    <para>In addition, the following items were fixed or added:</para>
 
     <itemizedlist>
 
