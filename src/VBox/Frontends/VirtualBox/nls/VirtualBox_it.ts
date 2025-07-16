@@ -9628,10 +9628,6 @@
         <translation>Impossibile modificare il parametro della tastiera.</translation>
     </message>
     <message>
-        <source>Failed to change mouse parameter.</source>
-        <translation type="vanished">Impossibile modificare il parametro del mouse.</translation>
-    </message>
-    <message>
         <source>Failed to change VSD parameter.</source>
         <translation>Impossibile modificare il parametro VSD.</translation>
     </message>
@@ -9785,14 +9781,6 @@
     <message>
         <source>Selects an ISO image to be attached to the virtual machine or used in unattended install.</source>
         <translation>Seleziona un&apos;immagine ISO da collegare alla macchina virtuale o da utilizzare nell&apos;installazione automatica.</translation>
-    </message>
-    <message>
-        <source>Invalid guest machine name</source>
-        <translation type="vanished">Nome della macchina virtuale non valido</translation>
-    </message>
-    <message>
-        <source>Guest machine name is valid</source>
-        <translation type="vanished">Il nome della macchina guest è valido</translation>
     </message>
     <message>
         <source>&amp;Subtype:</source>
@@ -12812,10 +12800,6 @@
     <message>
         <source>Next Check:</source>
         <translation>Prossimo controllo:</translation>
-    </message>
-    <message>
-        <source>Check for:</source>
-        <translation type="vanished">Controlla la presenza di:</translation>
     </message>
     <message>
         <source>&amp;Stable Release Versions</source>
