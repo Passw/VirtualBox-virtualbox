@@ -9653,10 +9653,6 @@
         <translation>Het is niet gelukt toetsenbordparameter te veranderen.</translation>
     </message>
     <message>
-        <source>Failed to change mouse parameter.</source>
-        <translation type="vanished">Het is niet gelukt muisparameter te veranderen.</translation>
-    </message>
-    <message>
         <source>Failed to change VSD parameter.</source>
         <translation>Het is niet gelukt VSD-parameter te veranderen.</translation>
     </message>
@@ -9810,14 +9806,6 @@
     <message>
         <source>Selects an ISO image to be attached to the virtual machine or used in unattended install.</source>
         <translation>Selecteert een ISO-image dat moet worden verbonden aan de virtuele machine of worden gebruikt bij een installatie zonder toezicht.</translation>
-    </message>
-    <message>
-        <source>Invalid guest machine name</source>
-        <translation type="vanished">Naam van de virtuele machine is ongeldig</translation>
-    </message>
-    <message>
-        <source>Guest machine name is valid</source>
-        <translation type="vanished">Naam van de virtuele machine is geldig</translation>
     </message>
     <message>
         <source>&amp;Subtype:</source>
@@ -12839,10 +12827,6 @@
     <message>
         <source>Next Check:</source>
         <translation>Volgende controle:</translation>
-    </message>
-    <message>
-        <source>Check for:</source>
-        <translation type="vanished">Controleer op:</translation>
     </message>
     <message>
         <source>&amp;Stable Release Versions</source>
