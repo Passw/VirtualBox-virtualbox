@@ -9633,7 +9633,7 @@
     </message>
     <message>
         <source>Don&apos;t show again</source>
-        <translation type="unfinished"></translation>
+        <translation>Non mostrare più</translation>
     </message>
 </context>
 <context>
@@ -14930,15 +14930,15 @@
     </message>
     <message>
         <source>Guest machine name cannot be empty</source>
-        <translation type="unfinished"></translation>
+        <translation>Il nome della macchina guest non può essere vuoto</translation>
     </message>
     <message>
         <source>Guest machine name is valid</source>
-        <translation type="unfinished">Il nome della macchina guest è valido</translation>
+        <translation>Il nome della macchina guest è valido</translation>
     </message>
     <message>
         <source>Guest machine path is not unique</source>
-        <translation type="unfinished"></translation>
+        <translation>Il percorso della macchina guest non è univoco</translation>
     </message>
 </context>
 <context>
