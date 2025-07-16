@@ -15764,11 +15764,11 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Failed to change mouse parameter.</source>
+        <source>Failed to change VSD parameter.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Failed to change VSD parameter.</source>
+        <source>Don&apos;t show again</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -15952,14 +15952,6 @@
     <message>
         <source>Holds the location of the virtual machine.</source>
         <translation type="vanished">Vsebuje mesto navideznega računalnika.</translation>
-    </message>
-    <message>
-        <source>Invalid guest machine name</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Guest machine name is valid</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>&amp;Subtype:</source>
@@ -19553,7 +19545,7 @@
     </message>
     <message>
         <source>Check for:</source>
-        <translation type="unfinished">Preveri za:</translation>
+        <translation type="obsolete">Preveri za:</translation>
     </message>
     <message>
         <source>&amp;Stable Release Versions</source>
@@ -22510,6 +22502,18 @@
     </message>
     <message>
         <source>Lists chosen configuration of the guest system.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Guest machine name cannot be empty</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Guest machine name is valid</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Guest machine path is not unique</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

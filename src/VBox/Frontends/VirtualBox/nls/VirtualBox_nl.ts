@@ -9654,11 +9654,15 @@
     </message>
     <message>
         <source>Failed to change mouse parameter.</source>
-        <translation>Het is niet gelukt muisparameter te veranderen.</translation>
+        <translation type="vanished">Het is niet gelukt muisparameter te veranderen.</translation>
     </message>
     <message>
         <source>Failed to change VSD parameter.</source>
         <translation>Het is niet gelukt VSD-parameter te veranderen.</translation>
+    </message>
+    <message>
+        <source>Don&apos;t show again</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -9809,11 +9813,11 @@
     </message>
     <message>
         <source>Invalid guest machine name</source>
-        <translation>Naam van de virtuele machine is ongeldig</translation>
+        <translation type="vanished">Naam van de virtuele machine is ongeldig</translation>
     </message>
     <message>
         <source>Guest machine name is valid</source>
-        <translation>Naam van de virtuele machine is geldig</translation>
+        <translation type="vanished">Naam van de virtuele machine is geldig</translation>
     </message>
     <message>
         <source>&amp;Subtype:</source>
@@ -12838,7 +12842,7 @@
     </message>
     <message>
         <source>Check for:</source>
-        <translation>Controleer op:</translation>
+        <translation type="vanished">Controleer op:</translation>
     </message>
     <message>
         <source>&amp;Stable Release Versions</source>
@@ -14973,6 +14977,18 @@
     <message>
         <source>Lists chosen configuration of the guest system.</source>
         <translation>Toont de gekozen configuratie van het gastsysteem.</translation>
+    </message>
+    <message>
+        <source>Guest machine name cannot be empty</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Guest machine name is valid</source>
+        <translation type="unfinished">Naam van de virtuele machine is geldig</translation>
+    </message>
+    <message>
+        <source>Guest machine path is not unique</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

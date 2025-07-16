@@ -9634,11 +9634,15 @@
     </message>
     <message>
         <source>Failed to change mouse parameter.</source>
-        <translation>Не удалось изменить параметр мыши.</translation>
+        <translation type="vanished">Не удалось изменить параметр мыши.</translation>
     </message>
     <message>
         <source>Failed to change VSD parameter.</source>
         <translation>Не удалось изменить параметр VSD.</translation>
+    </message>
+    <message>
+        <source>Don&apos;t show again</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -9789,11 +9793,11 @@
     </message>
     <message>
         <source>Invalid guest machine name</source>
-        <translation>Неверное имя гостевой машины</translation>
+        <translation type="vanished">Неверное имя гостевой машины</translation>
     </message>
     <message>
         <source>Guest machine name is valid</source>
-        <translation>Имя гостевой машины корректно</translation>
+        <translation type="vanished">Имя гостевой машины корректно</translation>
     </message>
     <message>
         <source>&amp;Subtype:</source>
@@ -12829,7 +12833,7 @@
     </message>
     <message>
         <source>Check for:</source>
-        <translation>Искать:</translation>
+        <translation type="vanished">Искать:</translation>
     </message>
     <message>
         <source>&amp;Stable Release Versions</source>
@@ -14957,6 +14961,18 @@
     <message>
         <source>Lists chosen configuration of the guest system.</source>
         <translation>Содержит выбранную конфигурацию гостевой системы.</translation>
+    </message>
+    <message>
+        <source>Guest machine name cannot be empty</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Guest machine name is valid</source>
+        <translation type="unfinished">Имя гостевой машины корректно</translation>
+    </message>
+    <message>
+        <source>Guest machine path is not unique</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

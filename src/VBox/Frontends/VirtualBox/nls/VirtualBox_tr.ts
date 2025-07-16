@@ -9623,11 +9623,15 @@
     </message>
     <message>
         <source>Failed to change mouse parameter.</source>
-        <translation>Fare parametresini değiştirme başarısız.</translation>
+        <translation type="vanished">Fare parametresini değiştirme başarısız.</translation>
     </message>
     <message>
         <source>Failed to change VSD parameter.</source>
         <translation>VSD parametresini değiştirme başarısız.</translation>
+    </message>
+    <message>
+        <source>Don&apos;t show again</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -9778,11 +9782,11 @@
     </message>
     <message>
         <source>Invalid guest machine name</source>
-        <translation>Geçersiz misafir makine adı</translation>
+        <translation type="vanished">Geçersiz misafir makine adı</translation>
     </message>
     <message>
         <source>Guest machine name is valid</source>
-        <translation>Misafir makine adı geçerli</translation>
+        <translation type="vanished">Misafir makine adı geçerli</translation>
     </message>
     <message>
         <source>&amp;Subtype:</source>
@@ -12792,7 +12796,7 @@
     </message>
     <message>
         <source>Check for:</source>
-        <translation>Denetlenen:</translation>
+        <translation type="vanished">Denetlenen:</translation>
     </message>
     <message>
         <source>&amp;Stable Release Versions</source>
@@ -14920,6 +14924,18 @@
     <message>
         <source>Lists chosen configuration of the guest system.</source>
         <translation>Misafir sisteminin seçilen yapılandırmasını listeler.</translation>
+    </message>
+    <message>
+        <source>Guest machine name cannot be empty</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Guest machine name is valid</source>
+        <translation type="unfinished">Misafir makine adı geçerli</translation>
+    </message>
+    <message>
+        <source>Guest machine path is not unique</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

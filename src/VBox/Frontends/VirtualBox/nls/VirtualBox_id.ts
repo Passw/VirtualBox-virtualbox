@@ -20308,11 +20308,15 @@
     </message>
     <message>
         <source>Failed to change mouse parameter.</source>
-        <translation>Gagal mengubah parameter tetikus.</translation>
+        <translation type="vanished">Gagal mengubah parameter tetikus.</translation>
     </message>
     <message>
         <source>Failed to change VSD parameter.</source>
         <translation>Gagal mengubah parameter VSD.</translation>
+    </message>
+    <message>
+        <source>Don&apos;t show again</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -20566,11 +20570,11 @@
     </message>
     <message>
         <source>Invalid guest machine name</source>
-        <translation>Nama mesin guest tidak valid</translation>
+        <translation type="vanished">Nama mesin guest tidak valid</translation>
     </message>
     <message>
         <source>Guest machine name is valid</source>
-        <translation>Nama mesin guest valid</translation>
+        <translation type="vanished">Nama mesin guest valid</translation>
     </message>
     <message>
         <source>&amp;Subtype:</source>
@@ -24931,7 +24935,7 @@ langkah ini dan memasang hard disk pada waktu lain menggunakan dialog Setting Me
     </message>
     <message>
         <source>Check for:</source>
-        <translation>Memeriksa keberadaan:</translation>
+        <translation type="vanished">Memeriksa keberadaan:</translation>
     </message>
     <message>
         <source>&amp;Stable Release Versions</source>
@@ -28588,6 +28592,18 @@ langkah ini dan memasang hard disk pada waktu lain menggunakan dialog Setting Me
     <message>
         <source>Lists chosen configuration of the guest system.</source>
         <translation>Mencantumkan daftar konfigurasi yang dipilih dari sistem guest.</translation>
+    </message>
+    <message>
+        <source>Guest machine name cannot be empty</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Guest machine name is valid</source>
+        <translation type="unfinished">Nama mesin guest valid</translation>
+    </message>
+    <message>
+        <source>Guest machine path is not unique</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

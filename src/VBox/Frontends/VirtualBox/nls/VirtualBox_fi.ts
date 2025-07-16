@@ -14932,11 +14932,11 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Failed to change mouse parameter.</source>
+        <source>Failed to change VSD parameter.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Failed to change VSD parameter.</source>
+        <source>Don&apos;t show again</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -15106,14 +15106,6 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Selects an ISO image to be attached to the virtual machine or used in unattended install.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Invalid guest machine name</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Guest machine name is valid</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -18961,10 +18953,6 @@ Kaikki VirtualBoxin komponentit käyttävät sitä koneen tunnistukseen.&lt;/p&g
         <translation type="unfinished">Seuraava tarkistus:</translation>
     </message>
     <message>
-        <source>Check for:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>&amp;Stable Release Versions</source>
         <translation type="unfinished"></translation>
     </message>
@@ -21363,6 +21351,18 @@ Kaikki VirtualBoxin komponentit käyttävät sitä koneen tunnistukseen.&lt;/p&g
     </message>
     <message>
         <source>Lists chosen configuration of the guest system.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Guest machine name cannot be empty</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Guest machine name is valid</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Guest machine path is not unique</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
