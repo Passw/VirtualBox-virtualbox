@@ -9629,10 +9629,6 @@
         <translation>Misslyckades med att ändra tangentbordsparametern.</translation>
     </message>
     <message>
-        <source>Failed to change mouse parameter.</source>
-        <translation type="vanished">Misslyckades med att ändra musparametern.</translation>
-    </message>
-    <message>
         <source>Failed to change VSD parameter.</source>
         <translation>Misslyckades med att ändra VSD-parametern.</translation>
     </message>
@@ -9786,14 +9782,6 @@
     <message>
         <source>Selects an ISO image to be attached to the virtual machine or used in unattended install.</source>
         <translation>Väljer en ISO-avbildning att anslutas till den virtuella maskinen eller använda i obevakad installation.</translation>
-    </message>
-    <message>
-        <source>Invalid guest machine name</source>
-        <translation type="vanished">Ogiltigt namn för gästmaskin</translation>
-    </message>
-    <message>
-        <source>Guest machine name is valid</source>
-        <translation type="vanished">Gästens maskinnamn är giltigt</translation>
     </message>
     <message>
         <source>&amp;Subtype:</source>
@@ -12813,10 +12801,6 @@
     <message>
         <source>Next Check:</source>
         <translation>Nästa kontroll:</translation>
-    </message>
-    <message>
-        <source>Check for:</source>
-        <translation type="vanished">Leta efter:</translation>
     </message>
     <message>
         <source>&amp;Stable Release Versions</source>
