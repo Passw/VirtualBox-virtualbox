@@ -9622,10 +9622,6 @@
         <translation>Klavye parametresini değiştirme başarısız.</translation>
     </message>
     <message>
-        <source>Failed to change mouse parameter.</source>
-        <translation type="vanished">Fare parametresini değiştirme başarısız.</translation>
-    </message>
-    <message>
         <source>Failed to change VSD parameter.</source>
         <translation>VSD parametresini değiştirme başarısız.</translation>
     </message>
@@ -9779,14 +9775,6 @@
     <message>
         <source>Selects an ISO image to be attached to the virtual machine or used in unattended install.</source>
         <translation>Sanal makineye takılacak veya katılımsız yüklemede kullanılacak bir ISO kalıbını seçer.</translation>
-    </message>
-    <message>
-        <source>Invalid guest machine name</source>
-        <translation type="vanished">Geçersiz misafir makine adı</translation>
-    </message>
-    <message>
-        <source>Guest machine name is valid</source>
-        <translation type="vanished">Misafir makine adı geçerli</translation>
     </message>
     <message>
         <source>&amp;Subtype:</source>
@@ -12793,10 +12781,6 @@
     <message>
         <source>Next Check:</source>
         <translation>Sonraki Denetleme:</translation>
-    </message>
-    <message>
-        <source>Check for:</source>
-        <translation type="vanished">Denetlenen:</translation>
     </message>
     <message>
         <source>&amp;Stable Release Versions</source>
