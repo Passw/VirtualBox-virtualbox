@@ -9638,7 +9638,7 @@
     </message>
     <message>
         <source>Don&apos;t show again</source>
-        <translation type="unfinished"></translation>
+        <translation>Больше не показывать</translation>
     </message>
 </context>
 <context>
@@ -14948,15 +14948,15 @@
     </message>
     <message>
         <source>Guest machine name cannot be empty</source>
-        <translation type="unfinished"></translation>
+        <translation>Имя гостевой машины не может быть пустым</translation>
     </message>
     <message>
         <source>Guest machine name is valid</source>
-        <translation type="unfinished">Имя гостевой машины корректно</translation>
+        <translation>Имя гостевой машины корректно</translation>
     </message>
     <message>
         <source>Guest machine path is not unique</source>
-        <translation type="unfinished"></translation>
+        <translation>Путь гостевой машины не уникален</translation>
     </message>
 </context>
 <context>
