@@ -1,4 +1,4 @@
-/* $Id: VirtualBoxClientImpl.cpp 106320 2024-10-15 12:08:41Z klaus.espenlaub@oracle.com $ */
+/* $Id: VirtualBoxClientImpl.cpp 110373 2025-07-23 10:04:02Z klaus.espenlaub@oracle.com $ */
 /** @file
  * VirtualBox COM class implementation
  */
@@ -616,7 +616,6 @@ void VirtualBoxClient::uninit()
         mData.m_pTrComponent = NULL;
     }
 #endif
-    mData.m_pToken.setNull();
     mData.m_pVirtualBox.setNull();
 
     ASMAtomicDecU32(&g_cInstances);
@@ -751,7 +750,6 @@ DECLCALLBACK(int) VirtualBoxClient::SVCWatcherThread(RTTHREAD ThreadSelf,
                  * restart attempts in some wedged config can cause high CPU
                  * and disk load. */
                 ComPtr<IVirtualBox> pVirtualBox;
-                ComPtr<IToken> pToken;
                 hrc = pVirtualBox.createLocalObject(CLSID_VirtualBox);
                 if (FAILED(hrc))
                     cMillies = 3 * VBOXCLIENT_DEFAULT_INTERVAL;
@@ -763,7 +761,6 @@ DECLCALLBACK(int) VirtualBoxClient::SVCWatcherThread(RTTHREAD ThreadSelf,
                         /* Update the VirtualBox reference, there's a working
                          * VBoxSVC again from now on. */
                         pThis->mData.m_pVirtualBox = pVirtualBox;
-                        pThis->mData.m_pToken = pToken;
 #ifdef VBOX_WITH_MAIN_NLS
                         /* update language using new instance of IVirtualBox in case the language settings was changed */
                         pThis->i_reloadApiLanguage();
