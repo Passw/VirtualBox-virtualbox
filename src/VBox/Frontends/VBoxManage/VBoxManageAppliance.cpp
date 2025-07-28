@@ -1,4 +1,4 @@
-/* $Id: VBoxManageAppliance.cpp 107236 2024-11-29 19:10:14Z brent.paulson@oracle.com $ */
+/* $Id: VBoxManageAppliance.cpp 110445 2025-07-28 16:47:13Z brent.paulson@oracle.com $ */
 /** @file
  * VBoxManage - The appliance-related commands.
  */
@@ -1409,6 +1409,7 @@ RTEXITCODE handleImportAppliance(HandlerArg *arg)
                         case VirtualSystemDescriptionType_CloudInstanceMetadata:
                         case VirtualSystemDescriptionType_CloudInstanceFreeFormTags:
                         case VirtualSystemDescriptionType_CloudImageFreeFormTags:
+                        case VirtualSystemDescriptionType_NVRAM:
                             /** @todo  VirtualSystemDescriptionType_Miscellaneous? */
                             break;
 

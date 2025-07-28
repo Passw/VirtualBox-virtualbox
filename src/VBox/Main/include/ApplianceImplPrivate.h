@@ -1,4 +1,4 @@
-/* $Id: ApplianceImplPrivate.h 106320 2024-10-15 12:08:41Z klaus.espenlaub@oracle.com $ */
+/* $Id: ApplianceImplPrivate.h 110445 2025-07-28 16:47:13Z brent.paulson@oracle.com $ */
 /** @file
  * VirtualBox Appliance private data definitions
  */
@@ -286,9 +286,11 @@ struct Appliance::Data
 struct Appliance::XMLStack
 {
     std::map<Utf8Str, const VirtualSystemDescriptionEntry*> mapDisks;
-    std::list<Utf8Str> mapDiskSequence;
-    std::list<Utf8Str> mapDiskSequenceForOneVM;//temporary keeps all disks attached to one exported VM
+    std::list<Utf8Str> mapFilesSequence; // list of all files (e.g. NVRAM files) and disks to include in exported VM(s)
+    std::list<Utf8Str> mapDiskSequenceForOneVM;//temporarily keeps all disks attached to one exported VM
     std::map<Utf8Str, bool> mapNetworks;
+    std::map<Utf8Str, std::pair<Utf8Str, Utf8Str> > mapNvramFiles; // details of all NVRAM files in the exported VM(s)
+    std::map<Utf8Str, std::pair<Utf8Str, Utf8Str> > mapNvramFileForOneVM; // temporary details of NVRAM file in an exported VM
 };
 
 class Appliance::TaskOVF : public ThreadTask
@@ -467,6 +469,8 @@ struct Appliance::ImportStack
 #endif
     Utf8Str                         strAudioAdapter;    // if not empty, then the guest has audio enabled, and this is the decimal
                                                         // representation of the audio adapter (should always be "0" for AC97 presently)
+    Utf8Str                         strNvramPath;       // if not empty, then the guest is using EFI and this is the path
+                                                        // to the VM's NVRAM file
 
     // session (not initially created)
     ComPtr<ISession>                pSession;           // session opened in Appliance::importFS() for machine manipulation

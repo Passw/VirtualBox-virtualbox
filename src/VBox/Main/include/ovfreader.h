@@ -1,4 +1,4 @@
-/* $Id: ovfreader.h 106320 2024-10-15 12:08:41Z klaus.espenlaub@oracle.com $ */
+/* $Id: ovfreader.h 110445 2025-07-28 16:47:13Z brent.paulson@oracle.com $ */
 /** @file
  * VirtualBox Main - OVF reader declarations.
  *
@@ -327,7 +327,8 @@ enum ResourceType_T
     ResourceType_LogicalDisk    = 31,
     ResourceType_StorageVolume  = 32,
     ResourceType_EthernetConnection = 33,
-    ResourceType_SoundCard  = 35    /**< @todo r=klaus: Not part of OVF/CIM spec, should use "Other" or some value from 0x8000..0xffff. */
+    ResourceType_SoundCard  = 35,   /**< @todo r=klaus: Not part of OVF/CIM spec, should use "Other" or some value from 0x8000..0xffff. */
+    ResourceType_NVRAM  = 0x8000
 };
 
 
@@ -663,6 +664,8 @@ struct VirtualSystem
     RTCString    strProductUrl;          // product info if any; receives contents of VirtualSystem/ProductSection/ProductUrl
     RTCString    strVendorUrl;           // product info if any; receives contents of VirtualSystem/ProductSection/VendorUrl
 
+    RTCString    strNvramPath;           // path to the VM's NVRAM path, if present
+
     const xml::ElementNode *pelmVBoxMachine; // pointer to <vbox:Machine> element under <VirtualSystem> element or NULL if not present
 
     VirtualSystem()
@@ -725,7 +728,7 @@ private:
     void LoopThruSections(const xml::ElementNode *pReferencesElem, const xml::ElementNode *pCurElem);
     void HandleDiskSection(const xml::ElementNode *pReferencesElem, const xml::ElementNode *pSectionElem);
     void HandleNetworkSection(const xml::ElementNode *pSectionElem);
-    void HandleVirtualSystemContent(const xml::ElementNode *pContentElem);
+    void HandleVirtualSystemContent(const xml::ElementNode *pReferencesElem, const xml::ElementNode *pContentElem);
 };
 
 } // end namespace ovf
