@@ -1,4 +1,4 @@
-/* $Id: internal-r3-win.h 106320 2024-10-15 12:08:41Z klaus.espenlaub@oracle.com $ */
+/* $Id: internal-r3-win.h 110551 2025-08-04 22:21:26Z knut.osmundsen@oracle.com $ */
 /** @file
  * IPRT - some Windows OS type constants.
  */
@@ -88,6 +88,7 @@ typedef enum RTWINOSTYPE
     kRTWinOSType_2019,                      /* 10.0 1809, server */
     kRTWinOSType_2022,                      /* 10.0 21H2, server */
     kRTWinOSType_11,                        /* 11.0, workstation */
+    kRTWinOSType_2025,                      /* 11.0 24H2, server */
     kRTWinOSType_NT_UNKNOWN = 199,
     kRTWinOSType_NT_LAST    = kRTWinOSType_UNKNOWN
 } RTWINOSTYPE;
