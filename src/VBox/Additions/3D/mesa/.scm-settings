@@ -1,10 +1,10 @@
-# $Id: .scm-settings 106320 2024-10-15 12:08:41Z klaus.espenlaub@oracle.com $
+# $Id: .scm-settings 110576 2025-08-05 20:55:01Z klaus.espenlaub@oracle.com $
 ## @file
 # Source code massager settings for 3D additions stuff.
 #
 
 #
-# Copyright (C) 2010-2024 Oracle and/or its affiliates.
+# Copyright (C) 2010-2025 Oracle and/or its affiliates.
 #
 # This file is part of VirtualBox base platform packages, as
 # available from https://www.virtualbox.org.
@@ -26,5 +26,8 @@
 #
 
 
---filter-out-dirs  "/mesa-*/."
+/mesa-*/.gitlab-ci/*.sh: --no-update-license --external-copyright --no-convert-tabs
+/mesa-*/.gitlab-ci/*/*.sh: --no-update-license --external-copyright --no-convert-tabs
+/mesa-*/.gitlab-ci/*.py: --no-update-license --external-copyright
+/mesa-*/.gitlab-ci/*/*.py: --no-update-license --external-copyright
 

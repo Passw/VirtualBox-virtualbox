@@ -1,4 +1,4 @@
-/* $Id: git_sha1.h 106320 2024-10-15 12:08:41Z klaus.espenlaub@oracle.com $ */
+/* $Id: git_sha1.h 110576 2025-08-05 20:55:01Z klaus.espenlaub@oracle.com $ */
 /** @file
  * Provides this include file for Mesa.
  *
@@ -6,7 +6,7 @@
  */
 
 /*
- * Copyright (C) 2018-2024 Oracle and/or its affiliates.
+ * Copyright (C) 2018-2025 Oracle and/or its affiliates.
  *
  * This file is part of VirtualBox base platform packages, as
  * available from https://www.virtualbox.org.
