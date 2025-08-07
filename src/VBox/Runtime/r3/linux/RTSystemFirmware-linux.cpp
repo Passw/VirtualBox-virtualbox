@@ -1,4 +1,4 @@
-/* $Id: RTSystemFirmware-linux.cpp 106320 2024-10-15 12:08:41Z klaus.espenlaub@oracle.com $ */
+/* $Id: RTSystemFirmware-linux.cpp 110595 2025-08-07 08:21:46Z andreas.loeffler@oracle.com $ */
 /** @file
  * IPRT - System firmware information, linux.
  */
@@ -106,8 +106,6 @@ RTDECL(int) RTSystemQueryFirmwareBoolean(RTSYSFWBOOL enmBoolean, bool *pfValue)
     }
     else if (rc == VERR_FILE_NOT_FOUND || rc == VERR_PATH_NOT_FOUND)
         rc = VINF_SUCCESS;
-    else if (rc == VERR_PERMISSION_DENIED)
-        rc = VERR_NOT_SUPPORTED;
 
     return rc;
 }
