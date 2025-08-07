@@ -1,4 +1,4 @@
-/* $Id: MediumImpl.cpp 110136 2025-07-07 14:37:45Z brent.paulson@oracle.com $ */
+/* $Id: MediumImpl.cpp 110599 2025-08-07 08:38:46Z alexander.eichner@oracle.com $ */
 /** @file
  * VirtualBox COM class implementation
  */
@@ -10753,7 +10753,11 @@ HRESULT Medium::i_taskImportHandler(Medium::ImportTask &task)
                              NULL /* pVDIfsOperation */,
                              m->vdImageIfaces,
                              task.mVDOperationIfaces);
-                if (RT_FAILURE(vrc))
+                if (vrc == VERR_DISK_FULL)
+                    throw setErrorBoth(VBOX_E_FILE_ERROR, vrc,
+                                       tr("Ran out of disk space while importing medium '%s'%s"),
+                                       targetLocation.c_str(), i_vdError(vrc).c_str());
+                else if (RT_FAILURE(vrc))
                     throw setErrorBoth(VBOX_E_FILE_ERROR, vrc,
                                        tr("Could not create the imported medium '%s'%s"),
                                        targetLocation.c_str(), i_vdError(vrc).c_str());
