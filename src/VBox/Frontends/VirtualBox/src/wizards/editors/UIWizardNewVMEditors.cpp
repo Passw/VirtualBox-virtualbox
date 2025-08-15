@@ -1,4 +1,4 @@
-/* $Id: UIWizardNewVMEditors.cpp 106320 2024-10-15 12:08:41Z klaus.espenlaub@oracle.com $ */
+/* $Id: UIWizardNewVMEditors.cpp 110733 2025-08-15 14:25:52Z serkan.bayraktar@oracle.com $ */
 /** @file
  * VBox Qt GUI - UIUserNamePasswordEditor class implementation.
  */
@@ -108,10 +108,10 @@ void UIUserNamePasswordGroupBox::setPassword(const QString &strPassword)
         m_pUserNamePasswordEditor->setPassword(strPassword);
 }
 
-bool UIUserNamePasswordGroupBox::isComplete()
+bool UIUserNamePasswordGroupBox::isComplete(const QString &strGuestOSFamilyId)
 {
     if (m_pUserNamePasswordEditor)
-        return m_pUserNamePasswordEditor->isComplete();
+        return m_pUserNamePasswordEditor->isComplete(strGuestOSFamilyId);
     return false;
 }
 

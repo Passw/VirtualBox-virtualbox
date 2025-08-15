@@ -1,4 +1,4 @@
-/* $Id: UIWizardNewVMEditors.h 106320 2024-10-15 12:08:41Z klaus.espenlaub@oracle.com $ */
+/* $Id: UIWizardNewVMEditors.h 110733 2025-08-15 14:25:52Z serkan.bayraktar@oracle.com $ */
 /** @file
  * VBox Qt GUI - UIWizardNewVMEditors class declaration.
  */
@@ -67,7 +67,7 @@ public:
 
         QString password() const;
         void setPassword(const QString &strPassword);
-        bool isComplete();
+        bool isComplete(const QString &strGuestOSFamilyId);
         void setLabelsVisible(bool fVisible);
     /** @} */
 
