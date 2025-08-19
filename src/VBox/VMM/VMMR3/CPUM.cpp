@@ -1,4 +1,4 @@
-/* $Id: CPUM.cpp 107898 2025-01-16 10:36:42Z ramshankar.venkataraman@oracle.com $ */
+/* $Id: CPUM.cpp 110759 2025-08-19 08:46:57Z ramshankar.venkataraman@oracle.com $ */
 /** @file
  * CPUM - CPU Monitor / Manager.
  */
@@ -3814,7 +3814,7 @@ static int cpumR3MapMtrrs(PVM pVM)
             pCtxMsrs->msr.MtrrFix4K_F0000  = 0x0505050505050505;
             pCtxMsrs->msr.MtrrFix4K_F8000  = 0x0505050505050505;
         }
-        LogRel(("CPUM: Mapped %Rhcb (%u bytes) of RAM using fixed-range MTRRs\n", _1M, _1M));
+        LogRel(("CPUM: Mapped %Rhcb (%u bytes) of RAM using fixed-range MTRRs\n", (uint64_t)_1M, _1M));
     }
     else
     {
