@@ -1,4 +1,4 @@
-/* $Id: UIUpdateManager.cpp 106320 2024-10-15 12:08:41Z klaus.espenlaub@oracle.com $ */
+/* $Id: UIUpdateManager.cpp 110806 2025-08-25 14:51:51Z sergey.dubov@oracle.com $ */
 /** @file
  * VBox Qt GUI - UIUpdateManager class implementation.
  */
@@ -272,12 +272,6 @@ UIUpdateManager::UIUpdateManager()
 
     /* Configure queue: */
     connect(m_pQueue, &UIExecutionQueue::sigQueueFinished, this, &UIUpdateManager::sltHandleUpdateFinishing);
-
-#ifdef VBOX_WITH_UPDATE_REQUEST
-    /* Ask updater to check for the first time, for Selector UI only: */
-    if (gEDataManager->applicationUpdateEnabled() && uiCommon().uiType() == UIType_ManagerUI)
-        QTimer::singleShot(0, this, SLOT(sltCheckIfUpdateIsNecessary()));
-#endif /* VBOX_WITH_UPDATE_REQUEST */
 }
 
 UIUpdateManager::~UIUpdateManager()
