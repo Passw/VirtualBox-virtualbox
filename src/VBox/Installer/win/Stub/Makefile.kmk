@@ -1,4 +1,4 @@
-# $Id: Makefile.kmk 106320 2024-10-15 12:08:41Z klaus.espenlaub@oracle.com $
+# $Id: Makefile.kmk 110896 2025-09-04 19:33:57Z klaus.espenlaub@oracle.com $
 ## @file
 # Sub-Makefile for the stub installer.
 #
@@ -34,7 +34,7 @@ include $(KBUILD_PATH)/subheader.kmk
 #
 TEMPLATE_VBoxStubTemplate          := Drop the signing, we will sign it later.
 TEMPLATE_VBoxStubTemplate_EXTENDS  := VBoxR3Static
-TEMPLATE_VBoxStubTemplate_POST_CMDS = $(NO_SUCH_VARIABLE)
+TEMPLATE_VBoxStubTemplate_POST_CMDS.win = $(NO_SUCH_VARIABLE)
 
 
 #
