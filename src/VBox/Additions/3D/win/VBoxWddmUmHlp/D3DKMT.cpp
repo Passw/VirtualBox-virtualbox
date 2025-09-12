@@ -1,4 +1,4 @@
-/* $Id: D3DKMT.cpp 106320 2024-10-15 12:08:41Z klaus.espenlaub@oracle.com $ */
+/* $Id: D3DKMT.cpp 110966 2025-09-12 14:44:51Z dmitrii.grigorev@oracle.com $ */
 /** @file
  * WDDM Kernel Mode Thunks helpers.
  */
@@ -227,7 +227,7 @@ static NTSTATUS vboxDispKmtOpenAdapterFromLuid(D3DKMT_HANDLE *phAdapter, LUID *p
     return Status;
 }
 
-NTSTATUS vboxDispKmtOpenAdapter2(D3DKMT_HANDLE *phAdapter, LUID *pLuid)
+NTSTATUS VBoxWddmKmtOpenAdapter2(D3DKMT_HANDLE *phAdapter, LUID *pLuid)
 {
     NTSTATUS Status = vboxDispKmtOpenAdapterFromLuid(phAdapter, pLuid);
     if (Status != STATUS_SUCCESS)
@@ -239,12 +239,12 @@ NTSTATUS vboxDispKmtOpenAdapter2(D3DKMT_HANDLE *phAdapter, LUID *pLuid)
     return Status;
 }
 
-NTSTATUS vboxDispKmtOpenAdapter(D3DKMT_HANDLE *phAdapter)
+NTSTATUS VBoxWddmKmtOpenAdapter(D3DKMT_HANDLE *phAdapter)
 {
-    return vboxDispKmtOpenAdapter2(phAdapter, NULL);
+    return VBoxWddmKmtOpenAdapter2(phAdapter, NULL);
 }
 
-NTSTATUS vboxDispKmtCloseAdapter(D3DKMT_HANDLE hAdapter)
+NTSTATUS VBoxWddmKmtCloseAdapter(D3DKMT_HANDLE hAdapter)
 {
     D3DKMTFUNCTIONS const *d3dkmt = D3DKMTFunctions();
     if (d3dkmt->pfnD3DKMTCloseAdapter == NULL)

@@ -1,4 +1,4 @@
-/* $Id: VBoxICD.c 106320 2024-10-15 12:08:41Z klaus.espenlaub@oracle.com $ */
+/* $Id: VBoxICD.c 110966 2025-09-12 14:44:51Z dmitrii.grigorev@oracle.com $ */
 /** @file
  * VirtualBox Windows Guest Mesa3D - OpenGL driver loader.
  */
@@ -83,7 +83,7 @@ void VBoxLoadICD(void)
 
     D3DKMTLoad();
 
-    Status = vboxDispKmtOpenAdapter(&hAdapter);
+    Status = VBoxWddmKmtOpenAdapter(&hAdapter);
     if (Status == STATUS_SUCCESS)
     {
         VBOXWDDM_QAI adapterInfo;
@@ -108,7 +108,7 @@ void VBoxLoadICD(void)
             }
         }
 
-        vboxDispKmtCloseAdapter(hAdapter);
+        VBoxWddmKmtCloseAdapter(hAdapter);
     }
 }
 

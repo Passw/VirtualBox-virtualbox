@@ -1,4 +1,4 @@
-/* $Id: VBoxDispIf.h 106320 2024-10-15 12:08:41Z klaus.espenlaub@oracle.com $ */
+/* $Id: VBoxDispIf.h 110966 2025-09-12 14:44:51Z dmitrii.grigorev@oracle.com $ */
 /** @file
  * VBoxTray - Display Settings Interface abstraction for XPDM & WDDM
  */
@@ -100,7 +100,7 @@ DWORD VBoxDispIfResizeModes(PCVBOXDISPIF const pIf, UINT iChangedMode, BOOL fEna
 DWORD VBoxDispIfCancelPendingResize(PCVBOXDISPIF const pIf);
 DWORD VBoxDispIfResizeStarted(PCVBOXDISPIF const pIf);
 
-BOOL VBoxDispIfResizeDisplayWin7(PCVBOXDISPIF const pIf, uint32_t cDispDef, const VMMDevDisplayDef *paDispDef);
+BOOL VBoxDispIfResizeDisplayWin7Wddm(PCVBOXDISPIF const pIf, uint32_t cDispDef, const VMMDevDisplayDef *paDispDef);
 
 typedef struct VBOXDISPIF_SEAMLESS
 {

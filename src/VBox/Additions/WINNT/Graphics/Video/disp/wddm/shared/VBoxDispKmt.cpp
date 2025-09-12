@@ -1,4 +1,4 @@
-/* $Id: VBoxDispKmt.cpp 106320 2024-10-15 12:08:41Z klaus.espenlaub@oracle.com $ */
+/* $Id: VBoxDispKmt.cpp 110966 2025-09-12 14:44:51Z dmitrii.grigorev@oracle.com $ */
 /** @file
  * VBoxVideo Display D3D User Mode Dll.
  */
@@ -305,7 +305,7 @@ static HRESULT vboxDispKmtOpenAdapterViaLuid(const VBOXDISPKMT_CALLBACKS *pCallb
     return E_FAIL;
 }
 
-HRESULT vboxDispKmtOpenAdapter(const VBOXDISPKMT_CALLBACKS *pCallbacks, PVBOXDISPKMT_ADAPTER pAdapter)
+HRESULT VBoxWddmKmtOpenAdapter(const VBOXDISPKMT_CALLBACKS *pCallbacks, PVBOXDISPKMT_ADAPTER pAdapter)
 {
     HRESULT hr = vboxDispKmtOpenAdapterViaHdc(pCallbacks, pAdapter);
     if (SUCCEEDED(hr))
@@ -318,7 +318,7 @@ HRESULT vboxDispKmtOpenAdapter(const VBOXDISPKMT_CALLBACKS *pCallbacks, PVBOXDIS
     return hr;
 }
 
-HRESULT vboxDispKmtCloseAdapter(PVBOXDISPKMT_ADAPTER pAdapter)
+HRESULT VBoxWddmKmtCloseAdapter(PVBOXDISPKMT_ADAPTER pAdapter)
 {
     D3DKMT_CLOSEADAPTER ClosaAdapterData = {0};
     ClosaAdapterData.hAdapter = pAdapter->hAdapter;
