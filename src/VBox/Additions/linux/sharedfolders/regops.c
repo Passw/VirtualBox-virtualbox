@@ -1,4 +1,4 @@
-/* $Id: regops.c 110052 2025-07-01 06:29:10Z vadim.galitsyn@oracle.com $ */
+/* $Id: regops.c 111311 2025-10-09 13:38:41Z vadim.galitsyn@oracle.com $ */
 /** @file
  * vboxsf - VBox Linux Shared Folders VFS, regular file inode and file operations.
  */
@@ -3806,7 +3806,14 @@ static inline void vbsf_write_begin_warn(loff_t pos, unsigned len, unsigned flag
     }
 }
 
-# if RTLNX_VER_MIN(6,12,0)
+# if RTLNX_VER_MIN(6,17,0)
+static int vbsf_write_begin(const struct kiocb *iocb, struct address_space *mapping, loff_t pos,
+                     unsigned len, struct folio **foliop, void **fsdata)
+{
+    vbsf_write_begin_warn(pos, len, 0);
+    return simple_write_begin(iocb, mapping, pos, len, foliop, fsdata);
+}
+# elif RTLNX_VER_MIN(6,12,0)
 static int vbsf_write_begin(struct file *file, struct address_space *mapping, loff_t pos,
                      unsigned len, struct folio **foliop, void **fsdata)
 {
@@ -3835,7 +3842,12 @@ static int vbsf_write_begin(struct file *file, struct address_space *mapping, lo
 /**
  * Companion to vbsf_write_begin (i.e. shouldn't be called).
  */
-# if RTLNX_VER_MIN(6,12,0)
+
+# if RTLNX_VER_MIN(6,17,0)
+static int vbsf_write_end(const struct kiocb *iocb, struct address_space *mapping,
+                          loff_t pos, unsigned int len, unsigned int copied,
+                          struct folio *folio, void *fsdata)
+# elif RTLNX_VER_MIN(6,12,0)
 static int vbsf_write_end(struct file *file, struct address_space *mapping,
                           loff_t pos, unsigned int len, unsigned int copied,
                           struct folio *folio, void *fsdata)
