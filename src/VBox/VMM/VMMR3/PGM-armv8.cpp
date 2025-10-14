@@ -1,4 +1,4 @@
-/* $Id: PGM-armv8.cpp 106320 2024-10-15 12:08:41Z klaus.espenlaub@oracle.com $ */
+/* $Id: PGM-armv8.cpp 111370 2025-10-14 06:02:06Z alexander.eichner@oracle.com $ */
 /** @file
  * PGM - Page Manager and Monitor, ARMv8 variant. (Mixing stuff here, not good?)
  */
@@ -815,7 +815,7 @@ void pgmR3RefreshShadowModeAfterA20Change(PVMCPU pVCpu)
 int pgmGstPtWalk(PVMCPUCC pVCpu, RTGCPTR GCPtr, PPGMPTWALK pWalk, PPGMPTWALKGST pGstWalk)
 {
     VMCPU_ASSERT_EMT(pVCpu);
-    AssertReleaseFailed();
+    AssertFailed();
     RT_NOREF(pVCpu, GCPtr, pWalk, pGstWalk);
     return VERR_NOT_IMPLEMENTED;
 }
@@ -824,7 +824,7 @@ int pgmGstPtWalk(PVMCPUCC pVCpu, RTGCPTR GCPtr, PPGMPTWALK pWalk, PPGMPTWALKGST 
 int pgmGstPtWalkNext(PVMCPUCC pVCpu, RTGCPTR GCPtr, PPGMPTWALK pWalk, PPGMPTWALKGST pGstWalk)
 {
     VMCPU_ASSERT_EMT(pVCpu);
-    AssertReleaseFailed();
+    AssertFailed();
     RT_NOREF(pVCpu, GCPtr, pWalk, pGstWalk);
     return VERR_NOT_IMPLEMENTED;
 }
