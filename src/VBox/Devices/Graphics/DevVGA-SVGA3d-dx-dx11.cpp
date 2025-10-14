@@ -1,4 +1,4 @@
-/* $Id: DevVGA-SVGA3d-dx-dx11.cpp 110762 2025-08-19 12:18:44Z vitali.pelenjow@oracle.com $ */
+/* $Id: DevVGA-SVGA3d-dx-dx11.cpp 111382 2025-10-14 13:27:46Z vitali.pelenjow@oracle.com $ */
 /** @file
  * DevVMWare - VMWare SVGA device
  */
@@ -7184,8 +7184,8 @@ static DECLCALLBACK(int) vmsvga3dBackDXDraw(PVGASTATECC pThisCC, PVMSVGA3DDXCONT
          * Emulate SVGA3D_PRIMITIVE_TRIANGLEFAN using an indexed draw of a triangle list.
          */
 
-        /* Make sure that 16 bit indices are enough. */
-        if (vertexCount > 65535)
+        /* Make sure that 16 bit indices are enough and there are enough vertices to draw at least one triangle. */
+        if (vertexCount > 65535 || vertexCount < 3)
         {
             LogRelMax(1, ("VMSVGA: ignore Draw(TRIANGLEFAN, %u)\n", vertexCount));
             return VERR_NOT_SUPPORTED;
@@ -7380,8 +7380,8 @@ static int dxDrawIndexedTriangleFan(DXDEVICE *pDevice, uint32_t IndexCountTF, ui
      * Emulate an indexed SVGA3D_PRIMITIVE_TRIANGLEFAN using an indexed draw of triangle list.
      */
 
-    /* Make sure that 16 bit indices are enough. */
-    if (IndexCountTF > 65535)
+    /* Make sure that 16 bit indices are enough and there are enough indices to draw at least one triangle. */
+    if (IndexCountTF > 65535 || IndexCountTF < 3)
     {
         LogRelMax(1, ("VMSVGA: ignore DrawIndexed(TRIANGLEFAN, %u)\n", IndexCountTF));
         return VERR_NOT_SUPPORTED;
