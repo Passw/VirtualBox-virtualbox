@@ -1,4 +1,4 @@
-/* $Id: DevVGA-SVGA3d-dx.cpp 111384 2025-10-14 13:34:33Z vitali.pelenjow@oracle.com $ */
+/* $Id: DevVGA-SVGA3d-dx.cpp 111386 2025-10-14 13:40:11Z vitali.pelenjow@oracle.com $ */
 /** @file
  * DevSVGA3d - VMWare SVGA device, 3D parts - Common code for DX backend interface.
  */
@@ -2188,8 +2188,12 @@ static int dxSetOrGrowCOTable(PVGASTATECC pThisCC, PVMSVGA3DDXCONTEXT pDXContext
         ASSERT_GUEST_RETURN(validSizeInBytes <= cbCOT, VERR_INVALID_PARAMETER);
         RT_UNTRUSTED_VALIDATED_FENCE();
 
+        /* When growing a COTable, the valid size can't be greater than the old COTable size. */
+        if (fGrow)
+            validSizeInBytes = RT_MIN(validSizeInBytes, vmsvgaR3MobSize(pDXContext->aCOTMobs[idxCOTable]));
+
         /* Create a memory pointer, which is accessible by host. */
-        rc = vmsvgaR3MobBackingStoreCreate(pSvgaR3State, pMob, validSizeInBytes);
+        rc = vmsvgaR3MobBackingStoreCreate(pSvgaR3State, pMob, fGrow ? 0 : validSizeInBytes);
     }
     else
     {
@@ -2225,8 +2229,15 @@ static int dxSetOrGrowCOTable(PVGASTATECC pThisCC, PVMSVGA3DDXCONTEXT pDXContext
         };
         AssertCompile(RT_ELEMENTS(s_acbEntry) == VBSVGA_NUM_COTABLES);
 
-        cEntries = cbCOT / s_acbEntry[idxCOTable];
-        cValidEntries = validSizeInBytes / s_acbEntry[idxCOTable];
+        uint32_t const cbEntry = s_acbEntry[idxCOTable];
+
+        cEntries = cbCOT / cbEntry;
+        cEntries = RT_MIN(cEntries, SVGA_COTABLE_MAX_IDS);
+
+        cValidEntries = validSizeInBytes / cbEntry;
+        cValidEntries = RT_MIN(cValidEntries, cEntries);
+
+        validSizeInBytes = cValidEntries * cbEntry;
     }
 
     if (RT_SUCCESS(rc))
