@@ -73,7 +73,7 @@ Rules for adding a changelog entry to make them look more uniform:
                            So, we use chapter and xpointer="xpointer(/chapter/)" with xi:include. -->
   <sect1>
 
-    <title>Version 7.1.Z (date tbd)</title>
+    <title>Version 7.1.14 (date tbd)</title>
 
     <para>This is a maintenance release. The following items were fixed or
       added:</para>
@@ -86,13 +86,72 @@ Rules for adding a changelog entry to make them look more uniform:
       </listitem>
 
       <listitem>
+        <para>GUI: Updated native language support for Polish, Greek, Swedish,
+          Portuguese, Turkish and Italian translations</para>
+      </listitem>
+
+      <listitem>
+        <para>GUI: Updated VBox VM network status-bar indicator tooltip (IP address) on guest additions
+          change (github:gh-179)</para>
+      </listitem>
+
+      <listitem>
         <para>Audio: Fixed a crash on Windows hosts when a host device has been
           changed and failed to reset (github:GH-72)</para>
       </listitem>
 
       <listitem>
-        <para>Guest Additions: Added autorun support for Oracle Linux 10
+        <para>VBoxManage: Fixed issue when two or more parallel "import" commands
+          were failing (github:GH-80)</para>
+      </listitem>
+
+      <listitem>
+        <para>Main: Added support for including the NVRAM file when exporting
+          and importing EFI-based VMs (bug #22370, github:GH-62)</para>
+      </listitem>
+
+      <listitem>
+        <para>Main: Improved Vorbis check when building VirtualBox from
+          source code (github:GH-94)</para>
+      </listitem>
+
+      <listitem>
+        <para>Main: Fixed issue when some snapshots could not be deleted (github:GH-75)</para>
+      </listitem>
+
+      <listitem>
+        <para>Main: Fixed issue when it was not possible to run more than 61 VMs
+          in parallel (github:GH-111)</para>
+      </listitem>
+
+      <listitem>
+        <para>Linux Guest and Host: Fixed issue when kernel modules could not be
+          compiled once kernel was configured with CONFIG_OBJTOOL_WERROR=y
+          option (github:GH-28, github:GH-93, github:GH-116)</para>
+      </listitem>
+
+      <listitem>
+        <para>Linux Guest and Host: Introduced initial support for kernels 6.17 and 6.18</para>
+      </listitem>
+
+      <listitem>
+        <para>Linux Guest Additions: Introduced additional fixes for RHEL 9.6
+          and 9.7 kernels (github:GH-12)</para>
+      </listitem>
+
+      <listitem>
+        <para>Linux Guest Additions: Added autorun support for Oracle Linux 10
           and RHEL 10</para>
+      </listitem>
+
+      <listitem>
+        <para>OS/2 Guest Additions: Fixed issue when some files could not be
+          copied from guest to host (github:GH-98)</para>
+      </listitem>
+
+      <listitem>
+        <para>Windows Guest Additions: Fixed issue when Guest Additions could not be
+          installed on Windows XP guest (github:GH-115)</para>
       </listitem>
 
     </itemizedlist>
