@@ -1,4 +1,4 @@
-/* $Id: IEMN8veRecompiler.h 107185 2024-11-26 22:43:27Z knut.osmundsen@oracle.com $ */
+/* $Id: IEMN8veRecompiler.h 111478 2025-10-21 21:23:56Z alexander.eichner@oracle.com $ */
 /** @file
  * IEM - Interpreted Execution Manager - Native Recompiler Internals.
  */
@@ -3038,7 +3038,6 @@ iemNativeRegClearGstRegShadowingOne(PIEMRECOMPILERSTATE pReNative, uint8_t idxHs
 }
 
 
-#if 0 /* unused */
 /**
  * Clear any guest register shadow claim for @a enmGstReg.
  */
@@ -3052,7 +3051,6 @@ iemNativeRegClearGstRegShadowingByGstReg(PIEMRECOMPILERSTATE pReNative, IEMNATIV
         iemNativeRegClearGstRegShadowingOne(pReNative, pReNative->Core.aidxGstRegShadows[enmGstReg], enmGstReg, off);
     }
 }
-#endif
 
 
 /**
