@@ -1,4 +1,4 @@
-/* $Id: UIMachineWindowNormal.cpp 106320 2024-10-15 12:08:41Z klaus.espenlaub@oracle.com $ */
+/* $Id: UIMachineWindowNormal.cpp 111481 2025-10-23 08:17:38Z sergey.dubov@oracle.com $ */
 /** @file
  * VBox Qt GUI - UIMachineWindowNormal class implementation.
  */
@@ -299,7 +299,11 @@ void UIMachineWindowNormal::loadSettings()
             m_pIndicatorsPool->setAutoUpdateIndicatorStates(statusBar()->isVisible() && uimachine()->isRunning());
     }
 
-#ifndef VBOX_GUI_WITH_CUSTOMIZATIONS1
+#ifdef VBOX_GUI_WITH_CUSTOMIZATIONS1
+    /* Just configure the window geometry for the 1st time,
+     * required to make Qt windows work on tiling window managers. */
+    UIDesktopWidgetWatchdog::setTopLevelGeometry(this, m_geometry);
+#else
     /* Load window geometry: */
     {
         /* Load extra-data: */
