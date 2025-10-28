@@ -1,4 +1,4 @@
-/* $Id: QITreeWidget.cpp 111373 2025-10-14 10:03:48Z sergey.dubov@oracle.com $ */
+/* $Id: QITreeWidget.cpp 111502 2025-10-28 10:26:14Z sergey.dubov@oracle.com $ */
 /** @file
  * VBox Qt GUI - Qt extensions: QITreeWidget class implementation.
  */
@@ -190,7 +190,7 @@ public:
     /** Returns a text for the passed @a enmTextRole. */
     virtual QString text(QAccessible::Text enmTextRole) const RT_OVERRIDE
     {
-        /* Make sure item still alive: */
+        /* Sanity check: */
         AssertPtrReturn(item(), QString());
 
         /* Return a text for the passed enmTextRole: */
