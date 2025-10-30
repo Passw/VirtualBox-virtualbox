@@ -1,4 +1,4 @@
-/* $Id: VBoxService.cpp 110684 2025-08-11 17:18:47Z klaus.espenlaub@oracle.com $ */
+/* $Id: VBoxService.cpp 111521 2025-10-30 12:50:56Z vadim.galitsyn@oracle.com $ */
 /** @file
  * VBoxService - Guest Additions Service Skeleton.
  */
@@ -815,6 +815,12 @@ int VGSvcStopServices(void)
         AssertRC(rc2);
     }
 #endif
+
+# ifdef RT_OS_LINUX
+    rc = VbglR3DrmClientStop();
+    if (RT_FAILURE(rc))
+        VGSvcVerbose(0, "VMSVGA DRM resizing client could not be stopped, rc=%Rrc\n", rc);
+# endif /* RT_OS_LINUX */
 
     VGSvcVerbose(2, "Stopping services returning: %Rrc\n", rc);
     VGSvcReportStatus(RT_SUCCESS(rc) ? VBoxGuestFacilityStatus_Paused : VBoxGuestFacilityStatus_Failed);
